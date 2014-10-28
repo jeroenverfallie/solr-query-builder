@@ -1,4 +1,4 @@
-# Solr Query Builder
+# Solr Query Builder [![Build Status](https://travis-ci.org/swiss-php-friends/solr-query-builder.svg?branch=master)](https://travis-ci.org/swiss-php-friends/solr-query-builder)
 
 **A simple PHP library to build Apache Solr queries**
 
@@ -33,8 +33,4 @@ $query = $qb->select()
     ->getQueryString();
 ```
 
-...or even more conplex with nested queries and fuzzy-search/ranges:
-
-```php
-###### TODO ######
-```
+The tests give a good overview of available functionality. Will complete the docs someday...
