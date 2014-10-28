@@ -1,6 +1,6 @@
 <?php
 
-namespace SPF\SolrQueryBuilder\Query;
+namespace SPF\SolrQueryBuilder;
 
 class InvalidArgumentException extends \InvalidArgumentException
 {

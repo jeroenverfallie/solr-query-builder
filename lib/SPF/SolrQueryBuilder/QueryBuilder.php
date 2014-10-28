@@ -3,9 +3,14 @@
 namespace SPF\SolrQueryBuilder;
 
 use SPF\SolrQueryBuilder\Query\QueryInterface;
-use SPF\SolrQueryBuilder\Query\Version;
+use SPF\SolrQueryBuilder\Query\Version as QueryVersion;
+use SPF\SolrQueryBuilder\ValueCreator\ValueCreatorInterface;
+use SPF\SolrQueryBuilder\ValueCreator\Version as ValueCreatorVersion;
 
-class QueryBuilder implements QueryBuilderInterface
+/**
+ * @package SPF\SolrQueryBuilder
+ */
+class QueryBuilder extends ValueBuilder implements QueryBuilderInterface
 {
     /**
      * @var int
@@ -18,6 +23,25 @@ class QueryBuilder implements QueryBuilderInterface
     public function __construct($version = self::VERSION_4)
     {
         $this->setVersion($version);
+
+        //TODO: remove duplicated switch for version management
+        switch ($this->version) {
+            case self::VERSION_3:
+                $this->valueCreator = new ValueCreatorVersion\Solr3ValueCreator();
+                break;
+            case self::VERSION_4:
+                $this->valueCreator = new ValueCreatorVersion\Solr4ValueCreator();
+                break;
+            default:
+                throw new UnsupportedVersionException(
+                    sprintf('Version %s is not supported (yet)', $this->version)
+                );
+                break;
+        }
+
+        if (!$this->valueCreator instanceof ValueCreatorInterface) {
+            throw new \LogicException('ValueCreator must implement ValueCreatorInterface!');
+        }
     }
 
     /**
@@ -35,10 +59,10 @@ class QueryBuilder implements QueryBuilderInterface
     {
         switch ($this->version) {
             case self::VERSION_3:
-                $query = new Version\Solr3SelectQuery();
+                $query = new QueryVersion\Solr3SelectQuery();
                 break;
             case self::VERSION_4:
-                $query = new Version\Solr4SelectQuery();
+                $query = new QueryVersion\Solr4SelectQuery();
                 break;
             default:
                 throw new UnsupportedVersionException(

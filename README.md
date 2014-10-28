@@ -24,12 +24,31 @@ The library provides a simple, fluid query builder. E.g.:
 
 ```php
 use SPF\SolrQueryBuilder\QueryBuilder;
+use SPF\SolrQueryBuilder\Query\QueryInterface
 
 $qb = new QueryBuilder;
+
+// simple wildcard query
 $query = $qb->select()
     ->where('text_en', 'foo')
     ->orWhere('text_en', 'bar', QueryInterface::WILDCARD_SURROUNDED)
     ->limit(10)
+    ->getQueryString();
+    
+// nesting
+$query = $qb->select()
+    ->nest()
+        ->where('text_de', 'foo')
+        ->andWhere('text_en', 'bar')
+    ->endNest()
+    ->orWhere('id', 2)
+    ->getQueryString();
+
+// value building (e.g. fuzzy-search or ranges)
+$query = $qb->select()
+    ->where('text_de', $qb->createFuzzySearchValue('foo', 0.7))
+    ->orWhere('text_en', $qb->createStringRange('bar', 'baz'))
+    ->orWhere('id', $qb->createNumericRange(10, 100))
     ->getQueryString();
 ```
 

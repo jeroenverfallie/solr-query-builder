@@ -63,13 +63,13 @@ class Solr4SelectQueryTest extends \PHPUnit_Framework_TestCase
 
     public function testWhereWithInvalidWildcard()
     {
-        $this->setExpectedException('SPF\SolrQueryBuilder\Query\InvalidArgumentException');
+        $this->setExpectedException('SPF\SolrQueryBuilder\InvalidArgumentException');
         $this->query->where('my_field_de', 'foo', 'sdfs');
     }
 
     public function testWhereWithInvalidWildcard2()
     {
-        $this->setExpectedException('SPF\SolrQueryBuilder\Query\InvalidArgumentException');
+        $this->setExpectedException('SPF\SolrQueryBuilder\InvalidArgumentException');
         $this->query->where('my_field_de', 'foo', 99);
     }
 
@@ -163,73 +163,5 @@ class Solr4SelectQueryTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $q);
         $this->assertNotEmpty($q);
         $this->assertEquals('my_field_de:"foo" rows:4 start:4', $q);
-    }
-
-    public function testCreateNumericRange()
-    {
-        $this->query
-            ->where(
-                'my_int_field',
-                $this->query->createNumericRange(10, 100)
-            );
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('my_int_field:"[10 TO 100]"', $q);
-    }
-
-    public function testCreateStringRange()
-    {
-        $this->query
-            ->where(
-                'text_en',
-                $this->query->createStringRange('foo', 'bar')
-            );
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('text_en:"{foo TO bar}"', $q);
-    }
-
-    public function testCreateFuzzySearchValue()
-    {
-        $this->query
-            ->where(
-                'text_en',
-                $this->query->createFuzzySearchValue('foo', 0.4)
-            )
-            ->andwhere(
-                'text_de',
-                $this->query->createFuzzySearchValue('foo')
-            );
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('text_en:"foo~0.4" AND text_de:"foo~0.8"', $q);
-    }
-
-    public function testCreateFuzzySearchValueWithInvalidSimilarity()
-    {
-        $this->setExpectedException('SPF\SolrQueryBuilder\Query\InvalidArgumentException');
-
-        $this->query
-            ->where(
-                'text_en',
-                $this->query->createFuzzySearchValue('foo', 5)
-            );
-    }
-
-    public function testCreateFuzzySearchValueWithInvalidSimilarity2()
-    {
-        $this->setExpectedException('SPF\SolrQueryBuilder\Query\InvalidArgumentException');
-
-        $this->query
-            ->where(
-                'text_en',
-                $this->query->createFuzzySearchValue('foo', 'almost')
-            );
     }
 }

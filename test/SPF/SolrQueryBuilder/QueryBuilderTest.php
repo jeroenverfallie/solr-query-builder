@@ -45,4 +45,28 @@ class QueryBuilderTest extends \PHPUnit_Framework_TestCase
         $qb = new QueryBuilder(999);
         $qb->select();
     }
+
+    public function testCreateNumericRange()
+    {
+        $qb = new QueryBuilder();
+        $value = $qb->createNumericRange(10, 100);
+
+        $this->assertInternalType('string', $value);
+    }
+
+    public function testCreateStringRange()
+    {
+        $qb = new QueryBuilder();
+        $value = $qb->createStringRange('foo', 'bar');
+
+        $this->assertInternalType('string', $value);
+    }
+
+    public function testCreateFuzzySearchValue()
+    {
+        $qb = new QueryBuilder();
+        $value = $qb->createFuzzySearchValue('foo', 0.5);
+
+        $this->assertInternalType('string', $value);
+    }
 } 

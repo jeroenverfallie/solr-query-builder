@@ -5,6 +5,9 @@ namespace SPF\SolrQueryBuilder\Query\Version;
 use SPF\SolrQueryBuilder\Query\AbstractSelectQuery;
 use SPF\SolrQueryBuilder\Query\QueryInterface;
 
+/**
+ * @package SPF\SolrQueryBuilder\Query\Version
+ */
 class Solr4SelectQuery extends AbstractSelectQuery implements QueryInterface
 {
     protected $whitspace = ' ';
@@ -19,17 +22,7 @@ class Solr4SelectQuery extends AbstractSelectQuery implements QueryInterface
 
     protected $nestingCloseTag = ')';
 
-    protected $numericRangeOpenTag = '[';
+    protected $limitOperator = 'rows:';
 
-    protected $numericRangeCloseTag = ']';
-
-    protected $numericRangeOperator = 'TO';
-
-    protected $stringRageOpenTag = '{';
-
-    protected $stringRangeCloseTag = '}';
-
-    protected $stringRangeOperator = 'TO';
-
-    protected $fuzzySearchOperator = '~';
+    protected $offsetOperator = 'start:';
 } 
