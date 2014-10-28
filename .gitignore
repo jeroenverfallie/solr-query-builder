@@ -1,3 +1,5 @@
+composer.phar
 vendor/
+
 doc/api/phpdoc-cache-*
 doc/api/structure.xml

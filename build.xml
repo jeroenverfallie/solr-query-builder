@@ -1,0 +1,56 @@
+<project name="solr-query-builder" default="build" basedir=".">
+    <description>
+        Buildfile for swiss-php-friends/solr-query-builder
+    </description>
+    <!-- set global properties for this build -->
+    <property name="lib_dir" location="lib"/>
+    <property name="test_dir" location="test"/>
+    <property name="api_doc_dir" location="doc/api"/>
+    <property name="coverage_doc_dir"  location="doc/coverage"/>
+
+    <!-- main targets -->
+
+    <target name="build" depends="-init, -install, phpunit, phpdoc" description="build the lib" >
+    </target>
+
+    <target name="phpunit" depends="-install">
+        <exec executable="vendor/bin/phpunit" failonerror="true">
+            <arg line="--coverage-html ${coverage_doc_dir} ${test_dir}" />
+        </exec>
+    </target>
+
+    <target name="phpdoc" depends="-install">
+        <exec executable="vendor/bin/phpdoc" failonerror="true">
+            <arg line="-d ${lib_dir} -t ${api_doc_dir} --template='responsive-twig'" />
+        </exec>
+    </target>
+
+    <!-- helpers -->
+
+    <target name="-init" depends="-clean">
+        <tstamp/>
+        <mkdir dir="${api_doc_dir}"/>
+        <mkdir dir="${coverage_doc_dir}"/>
+    </target>
+
+    <target name="-clean"
+            description="clean up" >
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${api_doc_dir}"/>
+        <delete dir="${coverage_doc_dir}"/>
+    </target>
+
+    <target name="-install" depends="-getcomposer">
+        <exec executable="composer.phar" failonerror="true">
+            <arg line=" install --dev"/>
+        </exec>
+    </target>
+
+    <target name="-getcomposer">
+        <exec executable="/bin/bash">
+            <arg value="-c" />
+            <arg value="curl -s https://getcomposer.org/installer | php" />
+        </exec>
+    </target>
+
+</project>

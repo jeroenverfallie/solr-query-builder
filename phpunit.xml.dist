@@ -23,4 +23,9 @@
         timeoutForLargeTests="60"
         strict="false"
         verbose="false">
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./lib</directory>
+        </whitelist>
+    </filter>
 </phpunit>
