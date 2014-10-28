@@ -41,8 +41,8 @@
     </target>
 
     <target name="-install" depends="-getcomposer">
-        <exec executable="composer.phar" failonerror="true">
-            <arg line=" install --dev"/>
+        <exec executable="php" failonerror="true">
+            <arg line="composer.phar install --dev"/>
         </exec>
     </target>
 
