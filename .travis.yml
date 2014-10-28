@@ -12,7 +12,7 @@ allow_failures:
 before_script:
   - composer install
 
-script: ant build
+script: ant build-travis
  
 cache:
   directories:

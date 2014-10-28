@@ -13,6 +13,9 @@
     <target name="build" depends="-init, -install, phpunit, phpdoc" description="build the lib" >
     </target>
 
+    <target name="build-travis" depends="-init, phpunit" description="build the lib using travis" >
+    </target>
+
     <target name="phpunit" depends="-install">
         <exec executable="vendor/bin/phpunit" failonerror="true">
             <arg line="--coverage-html ${coverage_doc_dir} ${test_dir}" />
