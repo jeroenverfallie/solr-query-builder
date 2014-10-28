@@ -3,3 +3,6 @@ vendor/
 
 doc/api/phpdoc-cache-*
 doc/api/structure.xml
+
+build/*
+!build/.gitkeep

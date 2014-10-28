@@ -1,0 +1,12 @@
+{
+    "alias": "solr-query-builder.phar",
+    "chmod": "0755",
+    "directories": ["lib", "vendor/composer"],
+    "files": [
+        "LICENSE",
+        "vendor/autoload.php"
+    ],
+    "git-version": "package_version",
+    "output": "build/solr-query-builder.phar",
+    "stub": true
+}
