@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Solr Query Builder</title>
+    <parser>
+        <target>doc/api</target>
+        <encoding>utf8</encoding>
+    </parser>
+    <transformer>
+        <target>doc/api</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>lib/SPF/SolrQueryBuilder</directory>
+    </files>
+</phpdoc>

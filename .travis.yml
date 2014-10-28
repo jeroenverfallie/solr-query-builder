@@ -12,7 +12,7 @@ allow_failures:
 before_script:
   - composer install
 
-script: vendor/bin/phpunit --coverage-text ./test
+script: ant build-travis
  
 cache:
   directories:

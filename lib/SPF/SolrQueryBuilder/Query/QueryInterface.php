@@ -22,6 +22,7 @@ interface QueryInterface
     /**
      * Adds a where clause
      *
+     * @api
      * @param string $field
      * @param string $value
      * @param int $wildcard
@@ -33,6 +34,7 @@ interface QueryInterface
     /**
      * Adds a where clause using a logical 'and' operator
      *
+     * @api
      * @param string $field
      * @param string $value
      * @param int $wildcard
@@ -44,6 +46,7 @@ interface QueryInterface
     /**
      * Adds a where clause using a logical 'or' operator
      *
+     * @api
      * @param string $field
      * @param string $value
      * @param int $wildcard
@@ -55,6 +58,7 @@ interface QueryInterface
     /**
      * Opens a logically nested part of the query '('
      *
+     * @api
      * @return QueryInterface
      */
     public function nest();
@@ -62,6 +66,7 @@ interface QueryInterface
     /**
      * Closes a logically nested part of the query ')'
      *
+     * @api
      * @return QueryInterface
      */
     public function endNest();
@@ -69,6 +74,7 @@ interface QueryInterface
     /**
      * Limits results to the given number (rows)
      *
+     * @api
      * @param int $limit
      * @return QueryInterface
      */
@@ -77,6 +83,7 @@ interface QueryInterface
     /**
      * Offsets results to the given number (start)
      *
+     * @api
      * @param int $offset
      * @return QueryInterface
      */
@@ -85,6 +92,7 @@ interface QueryInterface
     /**
      * Returns a numeric range value
      *
+     * @api
      * @param int $start
      * @param int $end
      * @return string
@@ -94,6 +102,7 @@ interface QueryInterface
     /**
      * Returns a string range value
      *
+     * @api
      * @param string $start
      * @param string $end
      * @return string
@@ -103,6 +112,7 @@ interface QueryInterface
     /**
      * Creates a search term to use for fuzzy search (levenstein)
      *
+     * @api
      * @param string $value Must be a single word
      * @param float $similarity Must be between 0 and 1
      * @throws InvalidArgumentException
@@ -113,6 +123,7 @@ interface QueryInterface
     /**
      * Returns the build solr query as a string
      *
+     * @api
      * @return string
      */
     public function getQueryString();

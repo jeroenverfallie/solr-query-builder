@@ -33,4 +33,10 @@ $query = $qb->select()
     ->getQueryString();
 ```
 
-The tests give a good overview of available functionality. Will complete the docs someday...
+## Documentation
+
+For a complete function reference [see the API-Docs](http://swiss-php-friends.github.io/solr-query-builder/doc/api/).
+
+The [tests](test/SPF/SolrQueryBuilder) also provide a good overview of the query builder and hot it works.
+
+May the [coverage-report](http://swiss-php-friends.github.io/solr-query-builder/doc/coverage/) provide you with some more information...
