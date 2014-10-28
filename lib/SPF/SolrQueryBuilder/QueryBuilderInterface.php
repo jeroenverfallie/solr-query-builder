@@ -13,6 +13,7 @@ interface QueryBuilderInterface
     /**
      * Sets the Solr version to use
      *
+     * @api
      * @param int $version
      * @return QueryBuilderInterface
      */
@@ -21,7 +22,8 @@ interface QueryBuilderInterface
     /**
      * Creates and returns a solr select query
      *
-     * @throws \SPF\SolrQueryBuilder\Solr\UnsupportedVersionException
+     * @api
+     * @throws \SPF\SolrQueryBuilder\UnsupportedVersionException
      * @throws \LogicException
      * @return QueryInterface
      */

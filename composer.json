@@ -2,7 +2,11 @@
     "name": "swiss-php-friends/solr-query-builder",
     "type": "library",
     "description": "Common library to build Apache Solr queries",
-    "keywords": ["solr", "query", "builder"],
+    "keywords": [
+        "solr",
+        "query",
+        "builder"
+    ],
     "homepage": "http://github.com/swiss-php-friends/solr-query-builder",
     "license": "MIT",
     "authors": [
@@ -16,7 +20,9 @@
     },
     "minimum-stability": "dev",
     "require-dev": {
-        "phpunit/phpunit": "~3.7"
+        "phpunit/phpunit": "~3.7",
+        "phpdocumentor/phpdocumentor": "2.7.1",
+        "evert/phpdoc-md": "~0.0.7"
     },
     "autoload": {
         "psr-0": {
