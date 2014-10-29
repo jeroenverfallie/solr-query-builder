@@ -7,7 +7,6 @@
 - Wildcard support
 - Fuzzy search
 - Integer- and string-range support
-- Limit / offset support
 - Fully unit-tested
 - Solr version support (3 & 4)
 
@@ -32,7 +31,6 @@ $qb = new QueryBuilder;
 $query = $qb->select()
     ->where('text_en', 'foo')
     ->orWhere('text_en', 'bar', QueryInterface::WILDCARD_SURROUNDED)
-    ->limit(10)
     ->getQueryString();
     
 // nesting
