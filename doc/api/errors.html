@@ -110,8 +110,8 @@
                     </div>
                 </li>
                 <li class="nav-header">Navigation</li>
-                                                                            <li><a href="#Query/AbstractSelectQuery.php"><i class="icon-file"></i> Query/AbstractSelectQuery.php</a></li>
-                                                                                                    <li><a href="#Query/InvalidArgumentException.php"><i class="icon-file"></i> Query/InvalidArgumentException.php</a></li>
+                                                                            <li><a href="#InvalidArgumentException.php"><i class="icon-file"></i> InvalidArgumentException.php</a></li>
+                                                                                                    <li><a href="#Query/AbstractSelectQuery.php"><i class="icon-file"></i> Query/AbstractSelectQuery.php</a></li>
                                                                                                     <li><a href="#Query/NestingException.php"><i class="icon-file"></i> Query/NestingException.php</a></li>
                                                                                                     <li><a href="#Query/QueryInterface.php"><i class="icon-file"></i> Query/QueryInterface.php</a></li>
                                                                                                     <li><a href="#Query/Version/Solr3SelectQuery.php"><i class="icon-file"></i> Query/Version/Solr3SelectQuery.php</a></li>
@@ -119,6 +119,11 @@
                                                                                                     <li><a href="#QueryBuilder.php"><i class="icon-file"></i> QueryBuilder.php</a></li>
                                                                                                     <li><a href="#QueryBuilderInterface.php"><i class="icon-file"></i> QueryBuilderInterface.php</a></li>
                                                                                                     <li><a href="#UnsupportedVersionException.php"><i class="icon-file"></i> UnsupportedVersionException.php</a></li>
+                                                                                                    <li><a href="#ValueBuilder.php"><i class="icon-file"></i> ValueBuilder.php</a></li>
+                                                                                                    <li><a href="#ValueCreator/AbstractValueCreator.php"><i class="icon-file"></i> ValueCreator/AbstractValueCreator.php</a></li>
+                                                                                                    <li><a href="#ValueCreator/ValueCreatorInterface.php"><i class="icon-file"></i> ValueCreator/ValueCreatorInterface.php</a></li>
+                                                                                                    <li><a href="#ValueCreator/Version/Solr3ValueCreator.php"><i class="icon-file"></i> ValueCreator/Version/Solr3ValueCreator.php</a></li>
+                                                                                                    <li><a href="#ValueCreator/Version/Solr4ValueCreator.php"><i class="icon-file"></i> ValueCreator/Version/Solr4ValueCreator.php</a></li>
                                                                     </ul>
         </div>
 
@@ -130,216 +135,10 @@
 
             
                             <div class="package-contents">
-                                            <a name="Query/AbstractSelectQuery.php" id="Query/AbstractSelectQuery.php"></a>
+                                            <a name="InvalidArgumentException.php" id="InvalidArgumentException.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Query/AbstractSelectQuery.php
-                            <span class="pull-right badge badge-info">37</span>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>0</td>
-                                        <td>No summary was found for this file</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>73</td>
-                                        <td>Argument $field is missing from the Docblock of where()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>73</td>
-                                        <td>Argument $value is missing from the Docblock of where()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>73</td>
-                                        <td>Argument $wildcard is missing from the Docblock of where()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>103</td>
-                                        <td>Argument $field is missing from the Docblock of andWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>103</td>
-                                        <td>Argument $value is missing from the Docblock of andWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>103</td>
-                                        <td>Argument $wildcard is missing from the Docblock of andWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>113</td>
-                                        <td>Argument $field is missing from the Docblock of orWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>113</td>
-                                        <td>Argument $value is missing from the Docblock of orWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>113</td>
-                                        <td>Argument $wildcard is missing from the Docblock of orWhere()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>178</td>
-                                        <td>Argument $start is missing from the Docblock of createNumericRange()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>178</td>
-                                        <td>Argument $end is missing from the Docblock of createNumericRange()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>192</td>
-                                        <td>Argument $start is missing from the Docblock of createStringRange()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>192</td>
-                                        <td>Argument $end is missing from the Docblock of createStringRange()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>206</td>
-                                        <td>Argument $value is missing from the Docblock of createFuzzySearchValue()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>206</td>
-                                        <td>Argument $similarity is missing from the Docblock of createFuzzySearchValue()</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>223</td>
-                                        <td>No summary for method &quot;&quot;</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>253</td>
-                                        <td>No summary for method &quot;&quot;</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>12</td>
-                                        <td>No summary for property $whitspace</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>14</td>
-                                        <td>No summary for property $wildcard</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>16</td>
-                                        <td>No summary for property $logicalAndOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>18</td>
-                                        <td>No summary for property $logicalOrOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>20</td>
-                                        <td>No summary for property $nestingOpenTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>22</td>
-                                        <td>No summary for property $nestingCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>24</td>
-                                        <td>No summary for property $numericRangeOpenTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>26</td>
-                                        <td>No summary for property $numericRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>28</td>
-                                        <td>No summary for property $numericRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>30</td>
-                                        <td>No summary for property $stringRageOpenTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>32</td>
-                                        <td>No summary for property $stringRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>34</td>
-                                        <td>No summary for property $stringRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>36</td>
-                                        <td>No summary for property $fuzzySearchOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>38</td>
-                                        <td>No summary for property $limitOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>40</td>
-                                        <td>No summary for property $offsetOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>45</td>
-                                        <td>No summary for property $parts</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>50</td>
-                                        <td>No summary for property $limit</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>55</td>
-                                        <td>No summary for property $offset</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>60</td>
-                                        <td>No summary for property $nestingCounter</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Query/InvalidArgumentException.php" id="Query/InvalidArgumentException.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Query/InvalidArgumentException.php
+                            InvalidArgumentException.php
                             <span class="pull-right badge badge-info">2</span>
                         </h3>
                         <div>
@@ -361,6 +160,137 @@
                                         <td>error</td>
                                         <td>5</td>
                                         <td>No summary for class &quot;&quot;</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Query/AbstractSelectQuery.php" id="Query/AbstractSelectQuery.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Query/AbstractSelectQuery.php
+                            <span class="pull-right badge badge-info">22</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>52</td>
+                                        <td>Argument $field is missing from the Docblock of where()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>52</td>
+                                        <td>Argument $value is missing from the Docblock of where()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>52</td>
+                                        <td>Argument $wildcard is missing from the Docblock of where()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>82</td>
+                                        <td>Argument $field is missing from the Docblock of andWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>82</td>
+                                        <td>Argument $value is missing from the Docblock of andWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>82</td>
+                                        <td>Argument $wildcard is missing from the Docblock of andWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>92</td>
+                                        <td>Argument $field is missing from the Docblock of orWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>92</td>
+                                        <td>Argument $value is missing from the Docblock of orWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>92</td>
+                                        <td>Argument $wildcard is missing from the Docblock of orWhere()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>130</td>
+                                        <td>No summary for method &quot;&quot;</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>150</td>
+                                        <td>No summary for method &quot;&quot;</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for property $whitspace</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $wildcard</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $logicalAndOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $logicalOrOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for property $nestingOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $nestingCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $limitOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>No summary for property $offsetOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>34</td>
+                                        <td>No summary for property $parts</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>39</td>
+                                        <td>No summary for property $nestingCounter</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -390,7 +320,7 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>5</td>
+                                        <td>10</td>
                                         <td>No summary for class &quot;&quot;</td>
                                     </tr>
                                                             </tbody>
@@ -421,7 +351,7 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>5</td>
+                                        <td>10</td>
                                         <td>No summary for interface &quot;&quot;</td>
                                     </tr>
                                                             </tbody>
@@ -433,7 +363,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Query/Version/Solr3SelectQuery.php
-                            <span class="pull-right badge badge-info">15</span>
+                            <span class="pull-right badge badge-info">10</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -452,73 +382,48 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>8</td>
+                                        <td>11</td>
                                         <td>No summary for class &quot;&quot;</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>12</td>
+                                        <td>15</td>
                                         <td>No summary for property $whitspace</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>14</td>
+                                        <td>17</td>
                                         <td>No summary for property $wildcard</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>16</td>
+                                        <td>19</td>
                                         <td>No summary for property $logicalAndOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>18</td>
+                                        <td>21</td>
                                         <td>No summary for property $logicalOrOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>20</td>
+                                        <td>23</td>
                                         <td>No summary for property $nestingOpenTag</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>22</td>
+                                        <td>25</td>
                                         <td>No summary for property $nestingCloseTag</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>24</td>
-                                        <td>No summary for property $numericRangeOpenTag</td>
+                                        <td>27</td>
+                                        <td>No summary for property $limitOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>26</td>
-                                        <td>No summary for property $numericRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>28</td>
-                                        <td>No summary for property $numericRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>30</td>
-                                        <td>No summary for property $stringRageOpenTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>32</td>
-                                        <td>No summary for property $stringRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>34</td>
-                                        <td>No summary for property $stringRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>36</td>
-                                        <td>No summary for property $fuzzySearchOperator</td>
+                                        <td>29</td>
+                                        <td>No summary for property $offsetOperator</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -529,7 +434,7 @@
                         <h3>
                             <i class="icon-file"></i>
                             Query/Version/Solr4SelectQuery.php
-                            <span class="pull-right badge badge-info">15</span>
+                            <span class="pull-right badge badge-info">10</span>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -548,73 +453,48 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>8</td>
+                                        <td>11</td>
                                         <td>No summary for class &quot;&quot;</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>10</td>
+                                        <td>13</td>
                                         <td>No summary for property $whitspace</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>12</td>
+                                        <td>15</td>
                                         <td>No summary for property $wildcard</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>14</td>
+                                        <td>17</td>
                                         <td>No summary for property $logicalAndOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>16</td>
+                                        <td>19</td>
                                         <td>No summary for property $logicalOrOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>18</td>
+                                        <td>21</td>
                                         <td>No summary for property $nestingOpenTag</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>20</td>
+                                        <td>23</td>
                                         <td>No summary for property $nestingCloseTag</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>22</td>
-                                        <td>No summary for property $numericRangeOpenTag</td>
+                                        <td>25</td>
+                                        <td>No summary for property $limitOperator</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>24</td>
-                                        <td>No summary for property $numericRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>26</td>
-                                        <td>No summary for property $numericRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>28</td>
-                                        <td>No summary for property $stringRageOpenTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>30</td>
-                                        <td>No summary for property $stringRangeCloseTag</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>32</td>
-                                        <td>No summary for property $stringRangeOperator</td>
-                                    </tr>
-                                                                    <tr class="error">
-                                        <td>error</td>
-                                        <td>34</td>
-                                        <td>No summary for property $fuzzySearchOperator</td>
+                                        <td>27</td>
+                                        <td>No summary for property $offsetOperator</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -644,22 +524,22 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>8</td>
+                                        <td>13</td>
                                         <td>No summary for class &quot;&quot;</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>18</td>
+                                        <td>23</td>
                                         <td>No summary for method &quot;&quot;</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>26</td>
+                                        <td>50</td>
                                         <td>Argument $version is missing from the Docblock of setVersion()</td>
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>13</td>
+                                        <td>18</td>
                                         <td>No summary for property $version</td>
                                     </tr>
                                                             </tbody>
@@ -721,8 +601,343 @@
                                     </tr>
                                                                     <tr class="error">
                                         <td>error</td>
-                                        <td>7</td>
+                                        <td>5</td>
                                         <td>No summary for class &quot;&quot;</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="ValueBuilder.php" id="ValueBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            ValueBuilder.php
+                            <span class="pull-right badge badge-info">8</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>Argument $start is missing from the Docblock of createNumericRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>Argument $end is missing from the Docblock of createNumericRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>33</td>
+                                        <td>Argument $start is missing from the Docblock of createStringRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>33</td>
+                                        <td>Argument $end is missing from the Docblock of createStringRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>41</td>
+                                        <td>Argument $value is missing from the Docblock of createFuzzySearchValue()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>41</td>
+                                        <td>Argument $similarity is missing from the Docblock of createFuzzySearchValue()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>20</td>
+                                        <td>No summary for property $valueCreator</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="ValueCreator/AbstractValueCreator.php" id="ValueCreator/AbstractValueCreator.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            ValueCreator/AbstractValueCreator.php
+                            <span class="pull-right badge badge-info">16</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>No summary for class &quot;&quot;</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>31</td>
+                                        <td>Argument $start is missing from the Docblock of createNumericRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>31</td>
+                                        <td>Argument $end is missing from the Docblock of createNumericRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>45</td>
+                                        <td>Argument $start is missing from the Docblock of createStringRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>45</td>
+                                        <td>Argument $end is missing from the Docblock of createStringRange()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>59</td>
+                                        <td>Argument $value is missing from the Docblock of createFuzzySearchValue()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>59</td>
+                                        <td>Argument $similarity is missing from the Docblock of createFuzzySearchValue()</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for property $whitspace</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $numericRangeOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>16</td>
+                                        <td>No summary for property $numericRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>No summary for property $numericRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>20</td>
+                                        <td>No summary for property $stringRageOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>22</td>
+                                        <td>No summary for property $stringRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>24</td>
+                                        <td>No summary for property $stringRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>26</td>
+                                        <td>No summary for property $fuzzySearchOperator</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="ValueCreator/ValueCreatorInterface.php" id="ValueCreator/ValueCreatorInterface.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            ValueCreator/ValueCreatorInterface.php
+                            <span class="pull-right badge badge-info">2</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>No summary for interface &quot;&quot;</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="ValueCreator/Version/Solr3ValueCreator.php" id="ValueCreator/Version/Solr3ValueCreator.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            ValueCreator/Version/Solr3ValueCreator.php
+                            <span class="pull-right badge badge-info">10</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for class &quot;&quot;</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $whitspace</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for property $numericRangeOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $numericRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $numericRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $stringRageOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for property $stringRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $stringRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $fuzzySearchOperator</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="ValueCreator/Version/Solr4ValueCreator.php" id="ValueCreator/Version/Solr4ValueCreator.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            ValueCreator/Version/Solr4ValueCreator.php
+                            <span class="pull-right badge badge-info">10</span>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>11</td>
+                                        <td>No summary for class &quot;&quot;</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>13</td>
+                                        <td>No summary for property $whitspace</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for property $numericRangeOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $numericRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $numericRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $stringRageOpenTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for property $stringRangeCloseTag</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $stringRangeOperator</td>
+                                    </tr>
+                                                                    <tr class="error">
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $fuzzySearchOperator</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -736,7 +951,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 28 Oct 2014 09:31:04 +0100.<br/>
+            generated on Wed, 29 Oct 2014 08:53:10 +0100.<br/>
     </footer>
     </body>
 </html>

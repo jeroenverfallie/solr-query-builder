@@ -36,16 +36,6 @@ abstract class AbstractSelectQuery implements QueryInterface
     /**
      * @var int
      */
-    protected $limit = null;
-
-    /**
-     * @var int
-     */
-    protected $offset = null;
-
-    /**
-     * @var int
-     */
     protected $nestingCounter = 0;
 
     /**
@@ -135,32 +125,6 @@ abstract class AbstractSelectQuery implements QueryInterface
     }
 
     /**
-     * Limits results to the given number (rows)
-     *
-     * @param int $limit
-     * @return QueryInterface
-     */
-    public function setLimit($limit)
-    {
-        $this->limit = intval($limit, 10);
-
-        return $this;
-    }
-
-    /**
-     * Offsets results to the given number (start)
-     *
-     * @param int $offset
-     * @return QueryInterface
-     */
-    public function setOffset($offset)
-    {
-        $this->offset = intval($offset, 10);
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getQueryString()
@@ -175,16 +139,6 @@ abstract class AbstractSelectQuery implements QueryInterface
             if (($i + 1) !== count($this->parts)) {
                 $q .= $this->whitspace;
             }
-        }
-
-        // set limit
-        if (!is_null($this->limit)) {
-            $q .= $this->whitspace . $this->limitOperator . $this->limit;
-        }
-
-        // set offset
-        if (!is_null($this->offset)) {
-            $q .= $this->whitspace . $this->offsetOperator . $this->offset;
         }
 
         return (string)$q;

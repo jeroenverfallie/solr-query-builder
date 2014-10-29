@@ -132,24 +132,6 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_createFuzzySearchValue" title="createFuzzySearchValue :: Creates a search term to use for fuzzy search (levenstein)">
-            <span class="description">Creates a search term to use for fuzzy search (levenstein)</span><pre>createFuzzySearchValue</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_createNumericRange" title="createNumericRange :: Returns a numeric range value">
-            <span class="description">Returns a numeric range value</span><pre>createNumericRange</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_createStringRange" title="createStringRange :: Returns a string range value">
-            <span class="description">Returns a string range value</span><pre>createStringRange</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
         <a href="#method_endNest" title="endNest :: Closes a logically nested part of the query &#039;)&#039;">
             <span class="description">Closes a logically nested part of the query &#039;)&#039;</span><pre>endNest</pre>
         </a>
@@ -174,18 +156,6 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setLimit" title="setLimit :: Limits results to the given number (rows)">
-            <span class="description">Limits results to the given number (rows)</span><pre>setLimit</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_setOffset" title="setOffset :: Offsets results to the given number (start)">
-            <span class="description">Offsets results to the given number (start)</span><pre>setOffset</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
         <a href="#method_where" title="where :: Adds a where clause">
             <span class="description">Adds a where clause</span><pre>where</pre>
         </a>
@@ -195,11 +165,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -249,7 +219,7 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Default</p>
+                                                                                <p>SPF\SolrQueryBuilder\Query</p>
                                     </td>
                                 </tr>
                                                                                                                             </table>
@@ -324,108 +294,6 @@
                                                                             
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_createFuzzySearchValue"></a>
-                        <div class="element clickable method public  method_createFuzzySearchValue" data-toggle="collapse" data-target=".method_createFuzzySearchValue .collapse">
-                            <h2>Creates a search term to use for fuzzy search (levenstein)</h2>
-                            <pre>createFuzzySearchValue(string $value, float $similarity = 0.8) : string</pre>
-                            <div class="labels">
-                                                                                                                                                                <span class="label label-info">api</span>                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$value</h4>
-                                                <code>string</code><p><p>Must be a single word</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$similarity</h4>
-                                                <code>float</code><p><p>Must be between 0 and 1</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_createNumericRange"></a>
-                        <div class="element clickable method public  method_createNumericRange" data-toggle="collapse" data-target=".method_createNumericRange .collapse">
-                            <h2>Returns a numeric range value</h2>
-                            <pre>createNumericRange(integer $start, integer $end) : string</pre>
-                            <div class="labels">
-                                                                                                                                                                <span class="label label-info">api</span>                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$start</h4>
-                                                <code>integer</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$end</h4>
-                                                <code>integer</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_createStringRange"></a>
-                        <div class="element clickable method public  method_createStringRange" data-toggle="collapse" data-target=".method_createStringRange .collapse">
-                            <h2>Returns a string range value</h2>
-                            <pre>createStringRange(string $start, string $end) : string</pre>
-                            <div class="labels">
-                                                                                                                                                                <span class="label label-info">api</span>                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$start</h4>
-                                                <code>string</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$end</h4>
-                                                <code>string</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
@@ -552,60 +420,6 @@
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$wildcard</h4>
-                                                <code>integer</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_setLimit"></a>
-                        <div class="element clickable method public  method_setLimit" data-toggle="collapse" data-target=".method_setLimit .collapse">
-                            <h2>Limits results to the given number (rows)</h2>
-                            <pre>setLimit(integer $limit) : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
-                            <div class="labels">
-                                                                                                                                                                <span class="label label-info">api</span>                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$limit</h4>
-                                                <code>integer</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_setOffset"></a>
-                        <div class="element clickable method public  method_setOffset" data-toggle="collapse" data-target=".method_setOffset .collapse">
-                            <h2>Offsets results to the given number (start)</h2>
-                            <pre>setOffset(integer $offset) : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
-                            <div class="labels">
-                                                                                                                                                                <span class="label label-info">api</span>                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$offset</h4>
                                                 <code>integer</code><p></p>
                                             </div>
                                                                             
@@ -766,7 +580,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 28 Oct 2014 09:31:04 +0100.<br/>
+            generated on Wed, 29 Oct 2014 08:53:09 +0100.<br/>
     </footer>
     </body>
 </html>

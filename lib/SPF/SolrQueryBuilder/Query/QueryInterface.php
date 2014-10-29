@@ -77,24 +77,6 @@ interface QueryInterface
     public function endNest();
 
     /**
-     * Limits results to the given number (rows)
-     *
-     * @api
-     * @param int $limit
-     * @return QueryInterface
-     */
-    public function setLimit($limit);
-
-    /**
-     * Offsets results to the given number (start)
-     *
-     * @api
-     * @param int $offset
-     * @return QueryInterface
-     */
-    public function setOffset($offset);
-
-    /**
      * Returns the build solr query as a string
      *
      * @api

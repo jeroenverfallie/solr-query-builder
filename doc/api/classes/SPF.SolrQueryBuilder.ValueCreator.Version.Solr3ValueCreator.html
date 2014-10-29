@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    Solr Query Builder &raquo; \SPF\SolrQueryBuilder\Query\Version\Solr4SelectQuery
+    <title>    Solr Query Builder &raquo; \SPF\SolrQueryBuilder\ValueCreator\Version\Solr3ValueCreator
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -120,44 +120,20 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public inherited">
-        <a href="#method___toString" title="__toString :: Returns the string representation of the query">
-            <span class="description">Returns the string representation of the query</span><pre>__toString</pre>
+        <a href="#method_createFuzzySearchValue" title="createFuzzySearchValue :: Creates a search term to use for fuzzy search (levenstein)">
+            <span class="description">Creates a search term to use for fuzzy search (levenstein)</span><pre>createFuzzySearchValue</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_andWhere" title="andWhere :: Adds a where clause using a logical &#039;and&#039; operator">
-            <span class="description">Adds a where clause using a logical &#039;and&#039; operator</span><pre>andWhere</pre>
+        <a href="#method_createNumericRange" title="createNumericRange :: Returns a numeric range value">
+            <span class="description">Returns a numeric range value</span><pre>createNumericRange</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_endNest" title="endNest :: Closes a logically nested part of the query &#039;)&#039;">
-            <span class="description">Closes a logically nested part of the query &#039;)&#039;</span><pre>endNest</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getQueryString" title="getQueryString :: Returns the build solr query as a string">
-            <span class="description">Returns the build solr query as a string</span><pre>getQueryString</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_nest" title="nest :: Opens a logically nested part of the query &#039;(&#039;">
-            <span class="description">Opens a logically nested part of the query &#039;(&#039;</span><pre>nest</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_orWhere" title="orWhere :: Adds a where clause using a logical &#039;or&#039; operator">
-            <span class="description">Adds a where clause using a logical &#039;or&#039; operator</span><pre>orWhere</pre>
-        </a>
-    </li>
-
-                                                                                                                                                                <li class="method public inherited">
-        <a href="#method_where" title="where :: Adds a where clause">
-            <span class="description">Adds a where clause</span><pre>where</pre>
+        <a href="#method_createStringRange" title="createStringRange :: Returns a string range value">
+            <span class="description">Returns a string range value</span><pre>createStringRange</pre>
         </a>
     </li>
 
@@ -165,16 +141,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                    <li class="method protected inherited">
-                            <a href="#method_validate" title="validate :: ">
-                                <span class="description"></span><pre>validate</pre>
-                            </a>
-                        </li>
-                                                                                    </ul>
+                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -188,13 +159,12 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>Solr4SelectQuery</h1>
+                <h1>Solr3ValueCreator</h1>
                 <small style="display: block; text-align: right">
-                                            Extends <a href="../classes/SPF.SolrQueryBuilder.Query.AbstractSelectQuery.html">\SPF\SolrQueryBuilder\Query\AbstractSelectQuery</a>
-                                                                Implements <a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a>
+                                            Extends <a href="../classes/SPF.SolrQueryBuilder.ValueCreator.AbstractValueCreator.html">\SPF\SolrQueryBuilder\ValueCreator\AbstractValueCreator</a>
+                                                                Implements <a href="../classes/SPF.SolrQueryBuilder.ValueCreator.ValueCreatorInterface.html">\SPF\SolrQueryBuilder\ValueCreator\ValueCreatorInterface</a>
                                     </small>
-                <p class="short_description">Abstract class for SelectQuery
-Override the operator/tag variables in a subclas on version changes</p>
+                <p class="short_description"></p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -206,16 +176,16 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>SPF\SolrQueryBuilder\Query\Version</p>
+                                                                                <p>SPF\SolrQueryBuilder\ValueCreator\Version</p>
                                     </td>
                                 </tr>
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method___toString"></a>
-                        <div class="element clickable method public  method___toString inherited" data-toggle="collapse" data-target=".method___toString .collapse">
-                            <h2>Returns the string representation of the query</h2>
-                            <pre>__toString() : string</pre>
+                                                                <a id="method_createFuzzySearchValue"></a>
+                        <div class="element clickable method public  method_createFuzzySearchValue inherited" data-toggle="collapse" data-target=".method_createFuzzySearchValue .collapse">
+                            <h2>Creates a search term to use for fuzzy search (levenstein)</h2>
+                            <pre>createFuzzySearchValue( $value,  $similarity = 0.8) : string</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -241,17 +211,26 @@ Override the operator/tag variables in a subclas on version changes</p>
                                             </tr>
                                                                             </table>
 
-                                    
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$similarity</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
                                                                             <h3>Response</h3>
                                         <code>string</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_andWhere"></a>
-                        <div class="element clickable method public  method_andWhere inherited" data-toggle="collapse" data-target=".method_andWhere .collapse">
-                            <h2>Adds a where clause using a logical &#039;and&#039; operator</h2>
-                            <pre>andWhere( $field,  $value,  $wildcard = self::WILDCARD_NONE) : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
+                                            <a id="method_createNumericRange"></a>
+                        <div class="element clickable method public  method_createNumericRange inherited" data-toggle="collapse" data-target=".method_createNumericRange .collapse">
+                            <h2>Returns a numeric range value</h2>
+                            <pre>createNumericRange( $start,  $end) : string</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -279,129 +258,24 @@ Override the operator/tag variables in a subclas on version changes</p>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$field</h4>
+                                                <h4>$start</h4>
                                                 <code></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$value</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$wildcard</h4>
+                                                <h4>$end</h4>
                                                 <code></code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_endNest"></a>
-                        <div class="element clickable method public  method_endNest inherited" data-toggle="collapse" data-target=".method_endNest .collapse">
-                            <h2>Closes a logically nested part of the query &#039;)&#039;</h2>
-                            <pre>endNest() : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_getQueryString"></a>
-                        <div class="element clickable method public  method_getQueryString inherited" data-toggle="collapse" data-target=".method_getQueryString .collapse">
-                            <h2>Returns the build solr query as a string</h2>
-                            <pre>getQueryString() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
                                                                             <h3>Response</h3>
                                         <code>string</code><p></p>
                                                                     </div>
                             </div>
 
                         </div>
-                                            <a id="method_nest"></a>
-                        <div class="element clickable method public  method_nest inherited" data-toggle="collapse" data-target=".method_nest .collapse">
-                            <h2>Opens a logically nested part of the query &#039;(&#039;</h2>
-                            <pre>nest() : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_orWhere"></a>
-                        <div class="element clickable method public  method_orWhere inherited" data-toggle="collapse" data-target=".method_orWhere .collapse">
-                            <h2>Adds a where clause using a logical &#039;or&#039; operator</h2>
-                            <pre>orWhere( $field,  $value,  $wildcard = self::WILDCARD_NONE) : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
+                                            <a id="method_createStringRange"></a>
+                        <div class="element clickable method public  method_createStringRange inherited" data-toggle="collapse" data-target=".method_createStringRange .collapse">
+                            <h2>Returns a string range value</h2>
+                            <pre>createStringRange( $start,  $end) : string</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -429,112 +303,16 @@ Override the operator/tag variables in a subclas on version changes</p>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$field</h4>
+                                                <h4>$start</h4>
                                                 <code></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$value</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$wildcard</h4>
+                                                <h4>$end</h4>
                                                 <code></code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_validate"></a>
-                        <div class="element clickable method protected  method_validate inherited" data-toggle="collapse" data-target=".method_validate .collapse">
-                            <h2>validate</h2>
-                            <pre>validate() </pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_where"></a>
-                        <div class="element clickable method public  method_where inherited" data-toggle="collapse" data-target=".method_where .collapse">
-                            <h2>Adds a where clause</h2>
-                            <pre>where( $field,  $value,  $wildcard = \SPF\SolrQueryBuilder\Query\QueryInterface::WILDCARD_NONE) : \SPF\SolrQueryBuilder\Query\QueryInterface</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$field</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$value</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$wildcard</h4>
-                                                <code></code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/SPF.SolrQueryBuilder.Query.QueryInterface.html">\SPF\SolrQueryBuilder\Query\QueryInterface</a></code><p></p>
+                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
@@ -567,10 +345,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_wildcard"> </a>
-                            <div class="element clickable property  protected property_wildcard inherited" data-toggle="collapse" data-target=".property_wildcard .collapse">
-                                <h2>wildcard</h2>
-                                <pre>wildcard : </pre>
+                                                    <a id="property_numericRangeOpenTag"> </a>
+                            <div class="element clickable property  protected property_numericRangeOpenTag inherited" data-toggle="collapse" data-target=".property_numericRangeOpenTag .collapse">
+                                <h2>numericRangeOpenTag</h2>
+                                <pre>numericRangeOpenTag : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -592,10 +370,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_logicalAndOperator"> </a>
-                            <div class="element clickable property  protected property_logicalAndOperator inherited" data-toggle="collapse" data-target=".property_logicalAndOperator .collapse">
-                                <h2>logicalAndOperator</h2>
-                                <pre>logicalAndOperator : </pre>
+                                                    <a id="property_numericRangeCloseTag"> </a>
+                            <div class="element clickable property  protected property_numericRangeCloseTag inherited" data-toggle="collapse" data-target=".property_numericRangeCloseTag .collapse">
+                                <h2>numericRangeCloseTag</h2>
+                                <pre>numericRangeCloseTag : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -617,10 +395,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_logicalOrOperator"> </a>
-                            <div class="element clickable property  protected property_logicalOrOperator inherited" data-toggle="collapse" data-target=".property_logicalOrOperator .collapse">
-                                <h2>logicalOrOperator</h2>
-                                <pre>logicalOrOperator : </pre>
+                                                    <a id="property_numericRangeOperator"> </a>
+                            <div class="element clickable property  protected property_numericRangeOperator inherited" data-toggle="collapse" data-target=".property_numericRangeOperator .collapse">
+                                <h2>numericRangeOperator</h2>
+                                <pre>numericRangeOperator : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -642,10 +420,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_nestingOpenTag"> </a>
-                            <div class="element clickable property  protected property_nestingOpenTag inherited" data-toggle="collapse" data-target=".property_nestingOpenTag .collapse">
-                                <h2>nestingOpenTag</h2>
-                                <pre>nestingOpenTag : </pre>
+                                                    <a id="property_stringRageOpenTag"> </a>
+                            <div class="element clickable property  protected property_stringRageOpenTag inherited" data-toggle="collapse" data-target=".property_stringRageOpenTag .collapse">
+                                <h2>stringRageOpenTag</h2>
+                                <pre>stringRageOpenTag : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -667,10 +445,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_nestingCloseTag"> </a>
-                            <div class="element clickable property  protected property_nestingCloseTag inherited" data-toggle="collapse" data-target=".property_nestingCloseTag .collapse">
-                                <h2>nestingCloseTag</h2>
-                                <pre>nestingCloseTag : </pre>
+                                                    <a id="property_stringRangeCloseTag"> </a>
+                            <div class="element clickable property  protected property_stringRangeCloseTag inherited" data-toggle="collapse" data-target=".property_stringRangeCloseTag .collapse">
+                                <h2>stringRangeCloseTag</h2>
+                                <pre>stringRangeCloseTag : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -692,10 +470,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_limitOperator"> </a>
-                            <div class="element clickable property  protected property_limitOperator inherited" data-toggle="collapse" data-target=".property_limitOperator .collapse">
-                                <h2>limitOperator</h2>
-                                <pre>limitOperator : </pre>
+                                                    <a id="property_stringRangeOperator"> </a>
+                            <div class="element clickable property  protected property_stringRangeOperator inherited" data-toggle="collapse" data-target=".property_stringRangeOperator .collapse">
+                                <h2>stringRangeOperator</h2>
+                                <pre>stringRangeOperator : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -717,10 +495,10 @@ Override the operator/tag variables in a subclas on version changes</p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_offsetOperator"> </a>
-                            <div class="element clickable property  protected property_offsetOperator inherited" data-toggle="collapse" data-target=".property_offsetOperator .collapse">
-                                <h2>offsetOperator</h2>
-                                <pre>offsetOperator : </pre>
+                                                    <a id="property_fuzzySearchOperator"> </a>
+                            <div class="element clickable property  protected property_fuzzySearchOperator inherited" data-toggle="collapse" data-target=".property_fuzzySearchOperator .collapse">
+                                <h2>fuzzySearchOperator</h2>
+                                <pre>fuzzySearchOperator : </pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -739,71 +517,19 @@ Override the operator/tag variables in a subclas on version changes</p>
 
                                                                                     <h3>Type(s)</h3>
                                             <code></code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_parts"> </a>
-                            <div class="element clickable property  protected property_parts inherited" data-toggle="collapse" data-target=".property_parts .collapse">
-                                <h2>parts</h2>
-                                <pre>parts : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    <a id="property_nestingCounter"> </a>
-                            <div class="element clickable property  protected property_nestingCounter inherited" data-toggle="collapse" data-target=".property_nestingCounter .collapse">
-                                <h2>nestingCounter</h2>
-                                <pre>nestingCounter : integer</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>integer</code>
                                                                             </div>
                                 </div>
                             </div>
                                                             </div>
             </div>
-            <a id="\SPF\SolrQueryBuilder\Query\Version\Solr4SelectQuery"></a>
+            <a id="\SPF\SolrQueryBuilder\ValueCreator\Version\Solr3ValueCreator"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/SPF.SolrQueryBuilder.Query.Version.html">Version</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/SPF.SolrQueryBuilder.ValueCreator.Version.html">Version</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/SPF.SolrQueryBuilder.Query.Version.Solr4SelectQuery.html">Solr4SelectQuery</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/SPF.SolrQueryBuilder.ValueCreator.Version.Solr3ValueCreator.html">Solr3ValueCreator</a></li>
             </ul>
         </div>
     </div>

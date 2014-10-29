@@ -127,41 +127,4 @@ class Solr4SelectQueryTest extends \PHPUnit_Framework_TestCase
 
         $this->query->getQueryString();
     }
-
-    public function testLimit()
-    {
-        $this->query
-            ->where('my_field_de', 'foo')
-            ->setLimit(4);
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('my_field_de:"foo" rows:4', $q);
-    }
-
-    public function testOffset()
-    {
-        $this->query
-            ->where('my_field_de', 'foo')
-            ->setOffset(4);
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('my_field_de:"foo" start:4', $q);
-    }
-
-    public function testLimitAndOffset()
-    {
-        $this->query
-            ->where('my_field_de', 'foo')
-            ->setLimit(4)
-            ->setOffset(4);
-        $q = $this->query->getQueryString();
-
-        $this->assertInternalType('string', $q);
-        $this->assertNotEmpty($q);
-        $this->assertEquals('my_field_de:"foo" rows:4 start:4', $q);
-    }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /Users/frank/git/solr-query-builder/lib/SPF/SolrQueryBuilder/Query</title>
+  <title>Dashboard for /Users/frank/git/solr-query-builder/lib/SPF/SolrQueryBuilder/ValueCreator/Version</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -19,7 +19,8 @@
      <div class="span12">
       <ul class="breadcrumb">
         <li><a href="index.html">/Users/frank/git/solr-query-builder/lib/SPF/SolrQueryBuilder</a> <span class="divider">/</span></li>
-        <li><a href="Query.html">Query</a></li>
+        <li><a href="ValueCreator.html">ValueCreator</a> <span class="divider">/</span></li>
+        <li><a href="ValueCreator_Version.html">Version</a></li>
         <li class="active">(Dashboard)</li>
 
       </ul>
@@ -46,15 +47,12 @@
     <div class="span6">
      <h2>Top Project Risks</h2>
      <ul>
-              <li><a href="Query_AbstractSelectQuery.php.html#13">AbstractSelectQuery</a> (18)</li>
 
      </ul>
     </div>
     <div class="span6">
      <h2>Least Tested Methods</h2>
      <ul>
-              <li><a href="Query_AbstractSelectQuery.php.html#44">AbstractSelectQuery::__toString</a> (0%)</li>
-              <li><a href="Query_AbstractSelectQuery.php.html#150">AbstractSelectQuery::validate</a> (80%)</li>
 
      </ul>
     </div>
@@ -81,7 +79,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,1,3], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -133,7 +131,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[95.555555555556,18,"<a href=\"Query_AbstractSelectQuery.php.html#13\">AbstractSelectQuery<\/a>"],[100,0,"<a href=\"Query_NestingException.php.html#10\">NestingException<\/a>"],[100,0,"<a href=\"Query_Version_Solr3SelectQuery.php.html#11\">Solr3SelectQuery<\/a>"],[100,0,"<a href=\"Query_Version_Solr4SelectQuery.php.html#11\">Solr4SelectQuery<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,0,"<a href=\"ValueCreator_Version_Solr3ValueCreator.php.html#11\">Solr3ValueCreator<\/a>"],[100,0,"<a href=\"ValueCreator_Version_Solr4ValueCreator.php.html#11\">Solr4ValueCreator<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
