@@ -36,7 +36,6 @@ class QueryBuilder extends ValueBuilder implements QueryBuilderInterface
                 throw new UnsupportedVersionException(
                     sprintf('Version %s is not supported (yet)', $this->version)
                 );
-                break;
         }
 
         if (!$this->valueCreator instanceof ValueCreatorInterface) {
@@ -68,7 +67,6 @@ class QueryBuilder extends ValueBuilder implements QueryBuilderInterface
                 throw new UnsupportedVersionException(
                     sprintf('Version %s is not supported (yet)', $this->version)
                 );
-                break;
         }
 
         if (!$query instanceof QueryInterface) {
