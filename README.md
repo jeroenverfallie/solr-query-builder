@@ -60,6 +60,12 @@ The [tests](test/SPF/SolrQueryBuilder) also provide a good overview of the query
 
 May the [coverage-report](http://swiss-php-friends.github.io/solr-query-builder/doc/coverage/) provide you with some more information...
 
+## Contribution
+
+You are very welcome to contribute. Report bugs and feature-requests to the [GitHub Issue Tracking](https://github.com/swiss-php-friends/solr-query-builder/issues), or propose a [PullRequest](https://github.com/swiss-php-friends/solr-query-builder/pulls).
+
+For contributions, please use the [Symfony Coding Standard](http://symfony.com/doc/current/contributing/code/standards.html) and write unit-tests.
+
 ## Release Notes
 
 See [GitHub Releases](https://github.com/swiss-php-friends/solr-query-builder/releases)
