@@ -112,6 +112,24 @@ class Solr4SelectQueryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('( my_field_de:"*foo*" AND my_second_field:"bar" ) OR my_third_field:"baz"', $q);
     }
 
+    public function testLogicNesting()
+    {
+        $this->query
+            ->where('first_field', 'one')
+            ->andNest()
+                ->where('second_field', 'two', QueryInterface::WILDCARD_SURROUNDED)
+                ->andWhere('third_field', 'three')
+            ->endNest()
+            ->orNest()
+                ->where('fourth_field', 'four')
+            ->endNest();
+        $q = $this->query->getQueryString();
+
+        $this->assertInternalType('string', $q);
+        $this->assertNotEmpty($q);
+        $this->assertEquals('first_field:"one" AND ( second_field:"*two*" AND third_field:"three" ) OR ( fourth_field:"four" )', $q);
+    }
+
     public function testInvalidNestingClose()
     {
         $this->setExpectedException('SPF\SolrQueryBuilder\Query\NestingException');

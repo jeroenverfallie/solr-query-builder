@@ -125,6 +125,24 @@ abstract class AbstractSelectQuery implements QueryInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function andNest()
+    {
+        $this->parts[] = $this->logicalAndOperator;
+        return $this->nest();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function orNest()
+    {
+        $this->parts[] = $this->logicalOrOperator;
+        return $this->nest();
+    }
+
+    /**
      * @return string
      */
     public function getQueryString()
@@ -157,4 +175,4 @@ abstract class AbstractSelectQuery implements QueryInterface
             throw new NestingException('Found a closing nested query which was never opened. Please fix!');
         }
     }
-} 
+}

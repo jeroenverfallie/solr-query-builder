@@ -77,10 +77,26 @@ interface QueryInterface
     public function endNest();
 
     /**
+     * Opens a logically nested part of the query '(' preceded by a logical 'and' operator
+     *
+     * @api
+     * @return QueryInterface
+     */
+    public function andNest();
+
+    /**
+     * Opens a logically nested part of the query '(' preceded by a logical 'or' operator
+     *
+     * @api
+     * @return QueryInterface
+     */
+    public function orNest();
+
+    /**
      * Returns the build solr query as a string
      *
      * @api
      * @return string
      */
     public function getQueryString();
-} 
+}
